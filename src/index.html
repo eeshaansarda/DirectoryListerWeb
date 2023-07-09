@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <title>Directory Manager</title>
+    </head>
+    <body>
+        <center>
+            <div id="header">
+                <div id="header-left">
+                    <h2>Directory lister</h2>
+                    Current directory: <span id="current-dir"></span><br>
+                    Server: <span id="current-server"></span><br>
+                </div>
+                <div id="header-right">
+                    <div id="search-wrapper">
+                        <input id="search-field"
+                            onkeyup="fetchsearch(this)" placeholder="Search">
+                        <button id="close-icon" onclick="backtodir()">x</button>
+                    </div>
+                </div>
+            </div>
+            <div id="empty">Show's over, nothing to see here</div>
+            <table id="folder-contents"></table>
+        </div>
+        <br>
+        <a href="#drawer"><span id="drawer-btn" onclick="openDrawer()">&or;<!--&#9660;--></span></a>
+
+        <div id="drawer">
+            <div id="theme-drawer">
+                <button onclick="changeTheme()">Toggle Theme</button>
+            </div>
+            <div id="checkbox-drawer"></div>
+        </center>
+    </body>
+</html>
